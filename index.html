@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Gramma's Oven European Bakery &amp; Café | Richmond Hill</title>
+  <meta name="description" content="Home-made European breads, croissants, Danishes, cakes, sandwiches and soups on Yonge Street in Richmond Hill. Rated 4.7★ from 546 Google reviews." />
+  <meta name="theme-color" content="#5c3116" />
+
+  <!-- Social share preview -->
+  <meta property="og:title" content="Gramma's Oven European Bakery & Café" />
+  <meta property="og:description" content="Baked fresh, just like Gramma made it. 12960 Yonge St, Richmond Hill." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%238b4a1f'/%3E%3Cpath d='M14 40c0-10 8-18 18-18s18 8 18 18z' fill='%23f3c77a'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Business details for Google search results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Gramma's Oven European Bakery & Café",
+    "telephone": "+1-905-773-7049",
+    "priceRange": "$10–20",
+    "servesCuisine": ["European", "Bakery", "Café"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12960 Yonge St",
+      "addressLocality": "Richmond Hill",
+      "addressRegion": "ON",
+      "postalCode": "L4E 1A1",
+      "addressCountry": "CA"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "546"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --brown: #8b4a1f;
+      --brown-dark: #5c3116;
+      --cream: #faf6ee;
+      --cream-2: #f5efe2;
+      --paper: #fffaf4;
+      --ink: #2a211b;
+      --muted: #6b5d52;
+      --line: #eadfce;
+      --gold: #e8a33d;
+      --tag: #fbe3c2;
+      --serif: "Fraunces", Georgia, "Times New Roman", serif;
+      --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --radius: 14px;
+      --wrap: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { max-width: 100%; display: block; }
+    [hidden] { display: none !important; }
+    a { color: inherit; }
+    h1, h2, h3 { font-family: var(--serif); line-height: 1.1; margin: 0; }
+
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brown);
+      margin: 0 0 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      border: 1.5px solid var(--brown);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-solid { background: var(--brown); color: #fff; }
+    .btn-solid:hover { background: var(--brown-dark); border-color: var(--brown-dark); }
+    .btn-ghost { background: transparent; color: var(--brown); }
+    .btn-ghost:hover { background: var(--brown); color: #fff; }
+
+    /* ---------- Header ---------- */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(250, 246, 238, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-mark {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--brown);
+      display: grid; place-items: center;
+      flex-shrink: 0;
+    }
+    .brand-name { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; line-height: 1.1; }
+    .brand-sub { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .nav-links { display: flex; gap: 32px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--brown); }
+
+    /* ---------- Hero ---------- */
+    .hero { padding: 72px 0 88px; }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+    .hero h1 { font-size: clamp(2.6rem, 5.4vw, 4.2rem); font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; }
+    .hero h1 em { font-style: italic; font-weight: 600; color: var(--brown); }
+    .hero-lead { color: var(--muted); font-size: 1.05rem; max-width: 30em; margin: 22px 0 30px; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+    .rating { display: flex; align-items: center; gap: 10px; margin-top: 28px; font-size: 0.9rem; color: var(--muted); }
+    .stars { color: var(--gold); letter-spacing: 2px; }
+    .rating strong { color: var(--ink); }
+
+    .hero-art { position: relative; justify-self: center; width: 100%; max-width: 440px; }
+    .arch {
+      aspect-ratio: 4 / 4.6;
+      border-radius: 220px 220px var(--radius) var(--radius);
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255, 250, 225, 0.9) 0 18%, transparent 40%),
+        radial-gradient(circle at 70% 30%, rgba(255, 240, 200, 0.6) 0 15%, transparent 35%),
+        linear-gradient(180deg, #fbe9c6 0%, #f6dcae 100%);
+      box-shadow: 0 30px 60px -30px rgba(92, 49, 22, 0.35), 0 0 0 10px rgba(255, 255, 255, 0.5);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+    .arch svg { width: 92%; margin-top: 8%; }
+    .price-badge {
+      position: absolute; left: -14px; bottom: 28px;
+      background: #fff; border-radius: 12px; padding: 10px 14px;
+      box-shadow: 0 10px 30px -10px rgba(92, 49, 22, 0.35);
+      font-size: 0.75rem; color: var(--muted); line-height: 1.3;
+    }
+    .price-badge strong { display: block; font-family: var(--serif); color: var(--ink); font-size: 1.05rem; }
+
+    /* ---------- Sections ---------- */
+    section { padding: 96px 0; }
+    .section-head { text-align: center; max-width: 620px; margin: 0 auto 48px; }
+    .section-head h2 { font-size: clamp(2rem, 3.6vw, 2.7rem); font-weight: 700; text-wrap: balance; }
+    .section-head p { color: var(--muted); margin: 16px 0 0; }
+
+    #about { background: var(--paper); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 28px;
+    }
+    .card-icon {
+      width: 44px; height: 44px; border-radius: 10px; background: var(--tag);
+      display: grid; place-items: center; font-size: 1.3rem; margin-bottom: 18px;
+    }
+    .card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+
+    /* ---------- Menu ---------- */
+    #menu { background: var(--cream-2); }
+    .tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 36px; }
+    .tab {
+      font: inherit; font-size: 0.9rem; font-weight: 500;
+      padding: 9px 20px; border-radius: 999px;
+      border: 1px solid var(--line); background: #fff; color: var(--ink);
+      cursor: pointer; transition: all 0.2s;
+    }
+    .tab:hover { border-color: var(--brown); }
+    .tab[aria-selected="true"] { background: var(--brown); border-color: var(--brown); color: #fff; }
+    .menu-list {
+      display: grid; grid-template-columns: 1fr 1fr; column-gap: 56px;
+      list-style: none; margin: 0 auto; padding: 0; max-width: 900px;
+    }
+    .menu-list li {
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
+      padding: 18px 0; border-bottom: 1px dashed var(--line);
+    }
+    .item-name { font-weight: 600; }
+    .item-desc { color: var(--muted); font-size: 0.88rem; margin-top: 2px; }
+    .tag {
+      flex-shrink: 0; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--brown); background: var(--tag);
+      padding: 4px 10px; border-radius: 999px;
+    }
+    .menu-note { text-align: center; color: var(--muted); font-size: 0.92rem; margin-top: 36px; }
+    .menu-note a { color: var(--brown); font-weight: 600; white-space: nowrap; }
+
+    /* ---------- Reviews ---------- */
+    #reviews { background: var(--paper); }
+    .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .quote {
+      margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 28px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;
+    }
+    .quote blockquote { margin: 0; font-family: var(--serif); font-size: 1.15rem; line-height: 1.45; }
+    .quote blockquote::before {
+      content: "\201C"; display: block; font-size: 2.6rem; line-height: 0.6;
+      color: var(--gold); margin-bottom: 10px;
+    }
+    .quote figcaption { font-size: 0.82rem; color: var(--muted); }
+    .rating-big { text-align: center; margin-top: 44px; }
+    .rating-big .score { font-family: var(--serif); font-size: 2.6rem; font-weight: 700; }
+    .rating-big .stars { font-size: 1.1rem; margin-left: 8px; }
+    .rating-big p { margin: 4px 0 0; color: var(--muted); font-size: 0.9rem; }
+
+    /* ---------- Visit ---------- */
+    #visit { background: var(--cream-2); }
+    .visit-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px; }
+    .visit-card {
+      background: var(--brown-dark); color: #f6eadb; border-radius: var(--radius); padding: 44px;
+    }
+    .visit-card .eyebrow { color: var(--gold); }
+    .visit-card h2 { color: #fff; font-size: 2.2rem; margin-bottom: 28px; }
+    .visit-card dl { margin: 0 0 32px; display: grid; gap: 20px; }
+    .visit-card dt {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 4px;
+    }
+    .visit-card dd { margin: 0; }
+    .visit-card dd a { color: #fff; }
+    .visit-card .btn-solid { background: #fff; color: var(--brown-dark); border-color: #fff; }
+    .visit-card .btn-ghost { color: #fff; border-color: rgba(255, 255, 255, 0.6); }
+    .visit-card .btn-ghost:hover { background: rgba(255, 255, 255, 0.12); }
+
+    .map {
+      position: relative; border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--line); background: #f7f4ec; min-height: 380px;
+    }
+    /* Shown behind the map so the box is never blank if the map can't load */
+    .map-fallback {
+      position: absolute; inset: 0; display: grid; place-content: center; justify-items: center;
+      text-align: center; gap: 10px; padding: 24px;
+    }
+    .map-fallback strong { font-family: var(--serif); font-size: 1.3rem; }
+    .map-fallback span { color: var(--muted); font-size: 0.9rem; }
+    .map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+    /* ---------- Footer ---------- */
+    footer { background: var(--ink); color: #c9bcae; padding: 40px 0; font-size: 0.88rem; }
+    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+    footer strong { color: #fff; font-family: var(--serif); font-size: 1.05rem; }
+    footer a { color: #fff; }
+
+    /* ---------- Mobile call bar ---------- */
+    .mobile-bar { display: none; }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero { padding: 48px 0 64px; }
+      .cards, .quotes { grid-template-columns: 1fr; }
+      .visit-grid { grid-template-columns: 1fr; }
+      .menu-list { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links { display: none; }
+      .nav { height: 64px; }
+      section { padding: 72px 0; }
+      .visit-card { padding: 32px 26px; }
+      .price-badge { left: 8px; }
+      .mobile-bar {
+        display: flex; gap: 10px;
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+        background: rgba(255, 255, 255, 0.96);
+        border-top: 1px solid var(--line);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      .mobile-bar .btn { flex: 1; }
+      body { padding-bottom: 76px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn, .tab { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Gramma's Oven home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path d="M3 16c0-5 4-9 9-9s9 4 9 9z" fill="#f3c77a" />
+            <path d="M8 11.5l1.2 2M12 10.5v2.5M16 11.5l-1.2 2" stroke="#8b4a1f" stroke-width="1.4" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span>
+          <span class="brand-name">Gramma's Oven</span><br />
+          <span class="brand-sub">European Bakery &amp; Café</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+      <a class="btn btn-solid" href="tel:+19057737049">Call us</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ---------- Hero ---------- -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Richmond Hill · Yonge Street</p>
+          <h1>Baked fresh,<br /><em>just like Gramma</em><br />made it.</h1>
+          <p class="hero-lead">
+            Home-made European breads, flaky croissants, Danishes, cakes, hearty sandwiches and soups,
+            with a good cup of coffee to go with them.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn btn-solid" href="#menu">See the menu</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Gramma%27s+Oven+12960+Yonge+St+Richmond+Hill+ON" target="_blank" rel="noopener">Get directions</a>
+          </div>
+          <div class="rating">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span><strong>4.7</strong> from 546 Google reviews</span>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="arch">
+            <!-- Loaf, baguette, croissant and coffee on a wooden board -->
+            <svg viewBox="0 0 400 260" role="img" aria-label="A round loaf, baguette, croissant and coffee on a wooden board">
+              <defs>
+                <linearGradient id="crust" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#c9773a" />
+                  <stop offset="1" stop-color="#8b4a1f" />
+                </linearGradient>
+                <linearGradient id="bag" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#e09a55" />
+                  <stop offset="1" stop-color="#b8682c" />
+                </linearGradient>
+                <linearGradient id="board" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#c58a55" />
+                  <stop offset="1" stop-color="#9a6436" />
+                </linearGradient>
+                <linearGradient id="crois" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#eab06a" />
+                  <stop offset="1" stop-color="#c47a35" />
+                </linearGradient>
+              </defs>
+
+              <ellipse cx="190" cy="236" rx="160" ry="10" fill="#8b4a1f" opacity="0.12" />
+
+              <!-- Baguette -->
+              <g transform="rotate(-24 270 120)">
+                <rect x="170" y="100" width="190" height="40" rx="20" fill="url(#bag)" />
+                <path d="M205 112l14 14M245 112l14 14M285 112l14 14M325 112l14 14" stroke="#f5cf95" stroke-width="4" stroke-linecap="round" />
+              </g>
+
+              <!-- Round loaf -->
+              <path d="M70 210c0-62 42-106 100-106s100 44 100 106z" fill="url(#crust)" />
+              <path d="M100 150c40-14 100-14 140 0" stroke="#f3c77a" stroke-width="6" fill="none" stroke-linecap="round" />
+              <path d="M88 182c50-14 114-14 164 0" stroke="#f3c77a" stroke-width="6" fill="none" stroke-linecap="round" />
+              <path d="M110 128c10-10 22-16 34-18" stroke="#e8a45f" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7" />
+
+              <!-- Board -->
+              <rect x="40" y="206" width="300" height="22" rx="11" fill="url(#board)" />
+
+              <!-- Croissant -->
+              <g transform="translate(110 186)">
+                <ellipse cx="-30" cy="18" rx="16" ry="11" fill="url(#crois)" transform="rotate(-25 -30 18)" />
+                <ellipse cx="30" cy="18" rx="16" ry="11" fill="url(#crois)" transform="rotate(25 30 18)" />
+                <ellipse cx="-14" cy="12" rx="17" ry="14" fill="url(#crois)" />
+                <ellipse cx="14" cy="12" rx="17" ry="14" fill="url(#crois)" />
+                <ellipse cx="0" cy="8" rx="18" ry="16" fill="url(#crois)" />
+                <path d="M-8 0c4 8 4 16 0 22M8 0c-4 8-4 16 0 22" stroke="#a9622a" stroke-width="2" fill="none" opacity="0.6" />
+              </g>
+
+              <!-- Coffee -->
+              <g transform="translate(300 160)">
+                <path d="M6 -26c-6 -8 6 -12 0 -20M18 -26c-6 -8 6 -12 0 -20" stroke="#a98b72" stroke-width="2.5" fill="none" stroke-linecap="round" />
+                <path d="M-8 -12h44l-6 56h-32z" fill="#fff" stroke="#5c3116" stroke-width="3" stroke-linejoin="round" />
+                <path d="M36 0c14 0 14 22 0 22" stroke="#5c3116" stroke-width="3" fill="none" />
+                <rect x="-11" y="-16" width="50" height="6" rx="3" fill="#5c3116" />
+              </g>
+            </svg>
+          </div>
+          <div class="price-badge"><strong>$10–20</strong>per person</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- About ---------- -->
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Our bakery</p>
+          <h2>Old-world recipes, made fresh every day</h2>
+          <p>
+            Gramma's Oven is a European bakery and café on Yonge Street. Stop in for a loaf to take home,
+            a box of pastries for the office, or sit down with a sandwich and a cappuccino.
+          </p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🍞</div>
+            <h3>Home-made breads</h3>
+            <p>Raisin, cinnamon raisin, light rye, walnut sourdough and crusty French baguettes.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🥐</div>
+            <h3>Pastries &amp; cakes</h3>
+            <p>Croissants, chocolate croissants, apple and poppyseed Danishes, cookies and cakes.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">☕</div>
+            <h3>Café &amp; lunch</h3>
+            <p>Panini, turkey and roast beef sandwiches, soups, and coffee to stay or to go.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Menu ---------- -->
+    <section id="menu">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Menu</p>
+          <h2>Customer favourites</h2>
+          <p>A taste of what's in our cases. Selection changes daily, so call ahead if you're after something specific.</p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Menu categories">
+          <button class="tab" role="tab" aria-selected="true" aria-controls="tab-breads" id="t-breads">Breads</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-pastries" id="t-pastries">Pastries &amp; Sweets</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-cafe" id="t-cafe">Café &amp; Lunch</button>
+        </div>
+
+        <!-- TODO: add prices once the owners provide them -->
+        <ul class="menu-list" id="tab-breads" role="tabpanel" aria-labelledby="t-breads">
+          <li><div><div class="item-name">Raisin Bread</div><div class="item-desc">Soft, sweet loaf packed with raisins</div></div><span class="tag">Popular</span></li>
+          <li><div><div class="item-name">Cinnamon Raisin</div><div class="item-desc">Swirled with cinnamon, great toasted</div></div><span class="tag">Popular</span></li>
+          <li><div><div class="item-name">French Stick Baguette</div><div class="item-desc">Crisp crust, airy crumb</div></div><span class="tag">Popular</span></li>
+          <li><div><div class="item-name">Walnut Sourdough Bread</div><div class="item-desc">Tangy sourdough with toasted walnuts</div></div></li>
+          <li><div><div class="item-name">Light Rye</div><div class="item-desc">Classic European rye</div></div></li>
+          <li><div><div class="item-name">Bagel &amp; Butter</div><div class="item-desc">Simple and satisfying</div></div></li>
+        </ul>
+
+        <ul class="menu-list" id="tab-pastries" role="tabpanel" aria-labelledby="t-pastries" hidden>
+          <li><div><div class="item-name">Chocolate Croissant</div><div class="item-desc">Buttery layers, dark chocolate centre</div></div><span class="tag">Popular</span></li>
+          <li><div><div class="item-name">Box of Cakes &amp; Danishes</div><div class="item-desc">A mixed box for the office or family</div></div><span class="tag">Popular</span></li>
+          <li><div><div class="item-name">Croissants</div><div class="item-desc">Flaky, golden and buttery</div></div></li>
+          <li><div><div class="item-name">Apple Danish</div><div class="item-desc">Spiced apple on flaky pastry</div></div></li>
+          <li><div><div class="item-name">Poppyseed Danish</div><div class="item-desc">A European classic</div></div></li>
+          <li><div><div class="item-name">Assorted Danishes</div><div class="item-desc">Ask what's fresh today</div></div></li>
+          <li><div><div class="item-name">Cinnamon Sticks</div><div class="item-desc">Twisted pastry with cinnamon sugar</div></div></li>
+          <li><div><div class="item-name">Cookie Plate</div><div class="item-desc">A selection of house cookies</div></div></li>
+        </ul>
+
+        <ul class="menu-list" id="tab-cafe" role="tabpanel" aria-labelledby="t-cafe" hidden>
+          <li><div><div class="item-name">Turkey Sandwich</div><div class="item-desc">On our fresh-baked bread</div></div><span class="tag">Popular</span></li>
+          <li><div><div class="item-name">Panini</div><div class="item-desc">Pressed and toasted to order</div></div><span class="tag">Popular</span></li>
+          <li><div><div class="item-name">Cappuccino</div><div class="item-desc">Espresso with steamed, foamy milk</div></div><span class="tag">Popular</span></li>
+          <li><div><div class="item-name">Roast Beef Sandwich</div><div class="item-desc">Hearty and filling</div></div></li>
+          <li><div><div class="item-name">Soup of the Day</div><div class="item-desc">Ask what's on today</div></div></li>
+          <li><div><div class="item-name">Coffee</div><div class="item-desc">To stay or to go</div></div></li>
+        </ul>
+
+        <p class="menu-note">Ordering a box for an event? Call us at <a href="tel:+19057737049">(905) 773-7049</a>.</p>
+      </div>
+    </section>
+
+    <!-- ---------- Reviews ---------- -->
+    <section id="reviews">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Reviews</p>
+          <h2>What our neighbours say</h2>
+        </div>
+        <div class="quotes">
+          <figure class="quote">
+            <blockquote>Tasty food, reasonable prices, friendly service and a nice ambience!</blockquote>
+            <figcaption>Google review</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>Amazing home-made bread, cakes, sandwiches, soups, etc.</blockquote>
+            <figcaption>Google review</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>Fresh and delicious food and the owners and staff are great people.</blockquote>
+            <figcaption>Google review</figcaption>
+          </figure>
+        </div>
+        <div class="rating-big">
+          <span class="score">4.7</span><span class="stars" aria-hidden="true">★★★★★</span>
+          <p>Based on 546 Google reviews</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Visit ---------- -->
+    <section id="visit">
+      <div class="wrap visit-grid">
+        <div class="visit-card">
+          <p class="eyebrow">Visit us</p>
+          <h2>Come say hello</h2>
+          <dl>
+            <div>
+              <dt>Address</dt>
+              <dd>12960 Yonge St<br />Richmond Hill, ON L4E 1A1</dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd><a href="tel:+19057737049">(905) 773-7049</a></dd>
+            </div>
+            <div>
+              <dt>Hours</dt>
+              <!-- TODO: replace with the full weekly hours from the owners -->
+              <dd>Opens 8 a.m. Monday<br />Call us for hours on other days</dd>
+            </div>
+          </dl>
+          <div class="hero-ctas">
+            <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Gramma%27s+Oven+12960+Yonge+St+Richmond+Hill+ON" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-ghost" href="tel:+19057737049">Call</a>
+          </div>
+        </div>
+
+        <div class="map">
+          <div class="map-fallback">
+            <svg width="28" height="36" viewBox="0 0 28 36" aria-hidden="true">
+              <path d="M14 0C6 0 0 6 0 14c0 10 14 22 14 22s14-12 14-22C28 6 22 0 14 0z" fill="#d9483b" />
+              <circle cx="14" cy="14" r="5" fill="#fff" />
+            </svg>
+            <strong>12960 Yonge St</strong>
+            <span>Richmond Hill, ON L4E 1A1</span>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Gramma%27s+Oven+12960+Yonge+St+Richmond+Hill+ON" target="_blank" rel="noopener">Open in Google Maps</a>
+          </div>
+          <iframe
+            title="Map showing Gramma's Oven at 12960 Yonge St, Richmond Hill"
+            src="https://www.google.com/maps?q=Gramma%27s+Oven+12960+Yonge+St+Richmond+Hill+ON&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <strong>Gramma's Oven</strong><br />
+        European Bakery &amp; Café · 12960 Yonge St, Richmond Hill
+      </div>
+      <div>
+        <a href="tel:+19057737049">(905) 773-7049</a><br />
+        © <span id="year">2026</span> Gramma's Oven
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mobile-bar" aria-label="Quick actions">
+    <a class="btn btn-solid" href="tel:+19057737049">Call</a>
+    <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Gramma%27s+Oven+12960+Yonge+St+Richmond+Hill+ON" target="_blank" rel="noopener">Directions</a>
+  </nav>
+
+  <script>
+    // Menu tabs
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => {
+          const selected = t === tab;
+          t.setAttribute('aria-selected', selected);
+          document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
+        });
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
